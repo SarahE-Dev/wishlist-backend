@@ -12,7 +12,7 @@ const WishlistItemSchema = new mongoose.Schema({
     },
     user: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
+        ref: 'User' // Reference to link Users to their wishlists
     },
     priority: {
         type: Number,
