@@ -21,50 +21,50 @@ Welcome to the **Wishlist Tracker** backend! This server is built with **Node.js
 ## 🔧 Setup Instructions
 
 ### 1. Clone the Repository
-
-```bash
+```
 git clone https://github.com/SarahE-Dev/wishlist-backend.git
-cd wishlist-tracker-backend
-2. Install Dependencies
-bash
-Copy code
-npm install
-3. Environment Variables
+cd wishlist-backend```
+
+## Install Dependencies
+
+```
+npm install```
+
+## Environment Variables
+
 Create a .env file in the root directory and add the following:
 
-bash
-Copy code
+```
 PORT=5000
 MONGODB_URI=mongodb://localhost:27017/wishlist_tracker
-JWT_SECRET=your_jwt_secret
-4. Run the Development Server
-bash
-Copy code
-npm run dev
+JWT_SECRET=your_jwt_secret```
+
+## Start the Server
+
+
+```
+npm start```
+
 This will start the Express server and the app will be accessible at http://localhost:3001.
 
-5. Build the App for Production
-bash
-Copy code
-npm run build
-📂 Project Structure
-src/: Contains all the source code for the backend
-controllers/: Functions to handle requests for wishlists, items, and users
-models/: Mongoose models for User and Wishlist
-routes/: API route definitions
-middleware/: Middleware functions like authentication verification
-utils/: Helper functions (e.g., JWT signing, password hashing)
-📄 API Documentation
-Authentication
-POST /api/auth/signup: Sign up a new user
-POST /api/auth/login: Login and return a JWT token
-GET /api/auth/me: Get current user info (authenticated route)
-Wishlists
-GET /api/wishlists: Get all wishlists for the logged-in user
-POST /api/wishlists: Create a new wishlist
-PUT /api/wishlists/:id: Update a wishlist
-DELETE /api/wishlists/:id: Delete a wishlist
-Wishlist Items
-POST /api/wishlists/:id/items: Add an item to a wishlist
-PUT /api/wishlists/:id/items/:itemId: Update an item in a wishlist
-DELETE /api/wishlists/:id/items/:itemId: Delete an item from a wishlist
+## 5. Build the App for Production
+```
+npm run build```
+###📂 Project Structure
+
+* **models/:** Mongoose models for User and Wishlist
+* **routes/:** API route definitions
+
+###📄 API Documentation
+
+#### Authentication
+```
+POST /api/users/signup: Sign up a new user and return a JWT Token
+POST /api/users/login: Login and return a JWT token```
+
+#### Wishlists
+```
+GET /api/wishlist: Get all wishlists for the logged-in user
+POST /api/wishlist: Create a new wishlist
+PUT /api/wishlist/:id: Update a wishlist
+DELETE /api/wishlist/:id: Delete a wishlist```
