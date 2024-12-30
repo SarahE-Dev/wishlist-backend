@@ -20,6 +20,10 @@ mongoose.connect(process.env.MONGODB_URI)
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.error(err));
 
+app.get('/', (req, res) => {
+    res.json({ message: 'API Working' });
+});
+
 app.listen(PORT, () => {
     console.log(`Server listening on Port ${PORT}`);
 });
